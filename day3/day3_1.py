@@ -10,11 +10,11 @@ with open("input.txt", 'r') as text:
         matches = re.findall(pattern, line)
 
         if matches: ops.extend(matches)
-print(ops)
+#print(ops)
 res = 0
 for op in ops:
     numbers = re.findall(r'\d+', op)
     a,b = map(int, numbers)
     res += a*b
     
-print(res)
+print(f"{res:_}")
